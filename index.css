@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    max-height: 180px;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    margin: 24px 16px;
+}
+
+.container > * {
+    margin: 4px 6px;
+}
+
+h1 {
+    font-size: 48px;
+    order: 0;
+}
+
+.lista-tarefas {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    width: 80%;
+    display: flex;
+    flex: wrap;
+}
+
+ul li {
+    text-align: center;
+    list-style: none;
+    background-color: rgba(165, 42, 42, 0.479);
+    max-width: 30%;
+    width: 100%;
+    cursor: pointer;
+}
+
+ul li p {
+    margin: 8px;
+    padding-bottom: 6px;
+}
+
+
+
+.ItemDoMeio {
+    margin: 0 5%
+}
+
