@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-    $('form').on('submit', function(e) {
-        e.preventDefault();
+        const Tarefas = [];
 
         let linhas = "";
         let Hoje = new Date();
@@ -16,49 +15,36 @@ $(document).ready(function() {
             mes = '0' + mes
         }
 
-        AdicionarTarefa();
-        AtualizaTarefas();
+        $('form').submit(function(adicionar) {
+            adicionar.preventDefault();
+
+            AdicionarTarefa();
+            AtualizaTarefas();
+
+        })
 
         function AdicionarTarefa() {
-            let tarefa = $('#tarefa').val();
-            let data = `Tarefa adicionada ${dia}/${mes}/${ano}`
+            const nomeTarefa = document.getElementById('tarefa');
+            let data = `Tarefa adicionada ${dia}/${mes}/${ano}`;
+
+            if(Tarefas.includes(nomeTarefa.value)) {
+                alert('Você não pode ter duas tarefas com o mesmo nome...');
+            } else {
 
             let linha = `<li>`;
-            linha += `<p> ${tarefa} </p>`;
+            linha += `<p> ${nomeTarefa.value} </p>`;
             linha += `<p> ${data}`
+            linha += `</li>`
 
             linhas += linha;
+            }
+                    nomeTarefa.value = "";
         }
 
         function AtualizaTarefas() {
             const TodasAsTarefas = document.querySelector('ul');
             TodasAsTarefas.innerHTML = linhas;
         }
-
-
-
-
-        
-    })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 })

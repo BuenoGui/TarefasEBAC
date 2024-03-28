@@ -34,7 +34,7 @@ h1 {
 ul {
     width: 80%;
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
 }
 
 ul li {
@@ -50,8 +50,6 @@ ul li p {
     margin: 8px;
     padding-bottom: 6px;
 }
-
-
 
 .ItemDoMeio {
     margin: 0 5%
