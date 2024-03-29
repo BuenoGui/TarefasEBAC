@@ -11,14 +11,27 @@ form {
     height: 100%;
 }
 
+form input {
+    height: 24px;
+    border-radius: 16px;
+    margin-top: 16px;
+}
+
+form button {
+    height: 36px;
+    width: 40%;
+    margin: 30px 0;
+    margin-left: 33%;
+    background-color: teal;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+}
+
 .container {
     display: grid;
     align-items: center;
     margin: 24px 16px;
-}
-
-.container > * {
-    margin: 4px 6px;
 }
 
 h1 {
@@ -26,7 +39,8 @@ h1 {
     order: 0;
 }
 
-.lista-tarefas {
+.listaTarefas {
+    margin: 20px 0;
     display: flex;
     justify-content: center;
 }
@@ -35,14 +49,18 @@ ul {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 ul li {
+    border-radius: 20px;
     text-align: center;
     list-style: none;
     background-color: rgba(165, 42, 42, 0.479);
     max-width: 30%;
+    margin: 2% 1.667%;
     width: 100%;
+    max-height: 75px;
     cursor: pointer;
 }
 
@@ -51,7 +69,18 @@ ul li p {
     padding-bottom: 6px;
 }
 
-.ItemDoMeio {
-    margin: 0 5%
+.concluida {
+    background-color: #7ff5a3;
+    max-height: 110px;
+
 }
 
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.705);
+    color: #fff;
+}
